@@ -59,7 +59,7 @@ export class StockServiceService extends BaseService {
 
 
           var model = new StockModel(id,'','', single["4. close"]);
-          model.diff = single["1. open"] - single["3. low"];
+          model.diff = single["1. open"] - single["4. close"];
           model.volume = single["5. volume"];
 
           return model;
