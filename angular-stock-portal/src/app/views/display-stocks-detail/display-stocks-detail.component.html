@@ -1,0 +1,28 @@
+<h2>Stock Details</h2>
+
+<div class="content">
+
+    <form [formGroup]="form">   
+           <div class="form-group">
+            <label for="code">Symbol: </label>
+            <input formControlName="code" class="form-control" readonly />
+        </div> 
+        <div class="form-group">
+            <label for="price">Price: </label>
+            <input formControlName="price" class="form-control" readonly />
+        </div>    
+        <div class="form-group" style="margin-top: 25px;">
+            <label class="label" for="diff">Difference after closing market: </label>
+            {{model?.diff}}
+        </div>  <div class="form-group">
+            <label class="label" for="diff">Volume: </label>
+            {{model?.volume}}
+        </div>
+    </form>
+
+
+    <div class="">
+        <a routerLink="/" class="btn btn-primary">Go Back</a>
+    </div>
+
+</div>

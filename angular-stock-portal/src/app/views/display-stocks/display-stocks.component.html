@@ -1,0 +1,16 @@
+<div>
+
+    <form [formGroup]="form">
+        <label for="name">Name: </label>
+        <input formControlName="name" class="form-control" placeholder="TSLA" />
+
+        <pre>Write at least 3 characters to start searching...</pre>
+    </form>
+</div>
+<div class="content items">
+    <div class="list-item" *ngFor="let item of list">
+        • <a routerLink="detail/{{item.code}}">
+            {{item.name}} ({{item.code}})
+       </a>, {{item.type}}
+    </div>
+</div>
